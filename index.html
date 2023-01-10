@@ -168,13 +168,13 @@
     input[type="text"],
     select,
     textarea {
-        width: 100%;
+        width: 700px;
         padding: 12px;
         border: 1px solid #ccc;
         border-radius: 4px;
         box-sizing: border-box;
-        margin-top: 6px;
-        margin-bottom: 16px;
+        margin-top: 20px;
+        margin-bottom: 20px;
         resize: vertical;
     }
 
@@ -185,6 +185,7 @@
         border: none;
         border-radius: 4px;
         cursor: pointer;
+        align-items: center;
     }
 
     input[type="submit"]:hover {
@@ -201,12 +202,186 @@
     .contactform {
         font-family: Arial, Helvetica, sans-serif;
     }
+
+    .hireme {
+        height: 100vh;
+        background-color: #1e1924;
+        color: white;
+    }
+
+    .tab {
+        float: left;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+        width: 30%;
+        height: 300px;
+    }
+
+    /* Style the buttons inside the tab */
+    .tab button {
+        display: block;
+        background-color: inherit;
+        color: black;
+        padding: 22px 16px;
+        width: 100%;
+        border: none;
+        outline: none;
+        text-align: left;
+        cursor: pointer;
+        font-size: 17px;
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+        background-color: #ddd;
+    }
+
+    /* Create an active/current "tab button" class */
+    .tab button.active {
+        background-color: #ccc;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+        float: left;
+        padding: 20px 12px;
+        border: 3px solid #ccc;
+        width: 50%;
+        border-radius: 10.5px;
+        border-left: none;
+        height: 300px;
+        display: none;
+    }
+
+    /* Clear floats after the tab */
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    .pics {
+        height: 100vh;
+        background-color: #191d2b;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mySlides {
+        display: none
+    }
+
+    img {
+        vertical-align: middle;
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Caption text */
+    .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .active,
+    .dot:hover {
+        background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+
+        .prev,
+        .next,
+        .text {
+            font-size: 11px
+        }
+    }
 </style>
 
 <body>
     <div id="navbar">
         <a href="#home">Home</a>
         <a href="#abtme">About Me</a>
+        <a href="#pics">My Pictures</a>
+        <a href="#hireme">Hire Me</a>
         <a href="#contact">Contact</a>
     </div>
 
@@ -226,56 +401,104 @@
         </center>
         <div class="abtmeone">
             <p>
-                You are a professional photographer with six years of experience in
-                the field and a strong skillset in traditional and digital photography
-                techniques, as well as a variety of genres including portrait,
-                landscape, and commercial photography. You are proficient in using
-                different camera equipment and software and are comfortable working in
-                both studio and on-location settings. Your dedication to your craft
-                and professionalism have earned you a reputation as a reliable and
-                talented photographer.
+                Hi, I am Zunaed Khaled. I am a professional phtographer. I studied in Ohio Internaional University.
+                I can take amazing pictures using any kind of camera!
             </p>
             <img class="img2"
                 src="https://images.unsplash.com/photo-1670688902227-57a22769c48c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
                 width="900px" height="609px" />
         </div>
-    </div>
-    <div class="contact" id="contact">
-        <center>
-            <h2>Please contact me if you have any queries!</h2>
-            <div class="contactform">
-                <div class="container">
-                    <form action="/action_page.php">
-                        <label for="fname">First Name</label>
-                        <input type="text" id="fname" name="firstname" placeholder="Your name.." />
+        <div class="pics" id="pics">
+            <h2 style="display: block; padding: 20px;">See a pictures I took! </h2>
+            <div class="slideshow-container">
 
-                        <label for="lname">Last Name</label>
-                        <input type="text" id="lname" name="lastname" placeholder="Your last name.." />
-
-                        <label for="lname">E-Mail</label>
-                        <input type="text" id="lname" name="lastname" placeholder="Youremail@gmail.com" />
-
-                        <label for="country">Country</label>
-                        <select id="country" name="country">
-                            <option value="sg">Singapore</option>
-                            <option value="australia">Australia</option>
-                            <option value="canada">Canada</option>
-                            <option value="usa">USA</option>
-                        </select>
-
-                        <label for="subject">Subject</label>
-                        <textarea id="subject" name="subject" placeholder="Write something.."
-                            style="height: 200px"></textarea>
-
-                        <input type="submit" value="Submit" />
-                    </form>
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 4</div>
+                    <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" style="width:100%">
                 </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 4</div>
+                    <img src="https://www.w3schools.com/howto/img_snow_wide.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 4</div>
+                    <img src="https://www.w3schools.com/howto/img_mountains_wide.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 4</div>
+                    <img src="https://i.pinimg.com/736x/97/f4/90/97f4902133f478487a5c8f603c11e6be.jpg"
+                        style="width:100%">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+
             </div>
-        </center>
-    </div>
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+        </div>
+        <div class="hireme" id="hireme">
+            <center>
+                <h2>See my prices</h2>
+
+                <div class="tab">
+                    <button class="tablinks" onmouseover="openCity(event, 'London')">1 Hour Session</button>
+                    <button class="tablinks" onmouseover="openCity(event, 'Paris')">5 Hours or More</button>
+                </div>
+
+                <div id="London" class="tabcontent">
+                    <h3 style="font-family: sans-serif;">1 Hour Session</h3>
+                    <p>$35 for 1 hour session</p>
+                </div>
+
+                <div id="Paris" class="tabcontent">
+                    <h3 style="font-family: sans-serif;">5 Hours or More</h3>
+                    <p>$45 for 5 hour session and added $5 every hour more than 5 hours.</p>
+                </div>
+
+                <div class="clearfix"></div>
+
+            </center>
+        </div>
+        <div class="contact" id="contact">
+            <center>
+                <h2>Please contact me if you have any queries!</h2>
+                <div class="contactform">
+                    <div class="container">
+                        <form action="/action_page.php">
+                            <input type="text" id="fname" name="firstname" placeholder="Your name.." />
+
+                            <input type="text" id="lname" name="lastname" placeholder="Your last name.." />
+
+                            <input type="text" id="lname" name="lastname" placeholder="Youremail@gmail.com" />
+
+                            <select id="country" name="country">
+                                <option value="sg">No Country Selected</option>
+                                <option value="sg">Singapore</option>
+                                <option value="australia">Australia</option>
+                                <option value="canada">Canada</option>
+                                <option value="usa">USA</option>
+                            </select>
+
+                            <textarea id="subject" name="subject" placeholder="Write something.."
+                                style="height: 200px; padding: 20px;"></textarea>
+                            <center><input type="submit" value="Submit" /></center>
+                        </form>
+                    </div>
+                </div>
+            </center>
+        </div>
 </body>
 <script>
-    // When the user scrolls down 20px from the top of the document, slide down the navbar
     window.onscroll = function () {
         scrollFunction();
     };
@@ -289,6 +512,47 @@
         } else {
             document.getElementById("navbar").style.top = "-50px";
         }
+    }
+
+    function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
     }
 </script>
 
